@@ -1,6 +1,8 @@
 from brownie import SimpleStorage, accounts
 
-
+# tip1: brownie test -k <function name>  --- for single test 
+# tip2: brownie test pdb --- debug in terminal
+# tip3: brownie uses pytest for testing
 def test_deploy():
     # Arrange
     account = accounts[0]

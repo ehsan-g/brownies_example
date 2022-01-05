@@ -11,11 +11,12 @@ def deploy_simple_storage():
     updated_stored_value = simple_storage.retrieve()
     print(updated_stored_value)
 
-
+# development and rinkeby infura
 def get_account():
     if network.show_active() == "development":
         return accounts[0]
     else:
+        # brownie run scripts/deploy2.py --network rinkeby
         return accounts.add(config["wallets"]["from_key"])
 
 
